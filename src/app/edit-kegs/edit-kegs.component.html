@@ -1,3 +1,5 @@
-<p>
-  edit-kegs works!
-</p>
+<div *ngIf="selectedKeg">
+<h3>Edit Kombucha</h3>
+<input [(ngModel)]="selectedKeg.name" placeholder="Enter new name:">
+<button (click)="finishedEditing()">Done!</button>
+</div>
