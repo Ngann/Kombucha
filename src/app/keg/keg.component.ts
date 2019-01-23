@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./keg.component.css']
 })
 export class KegComponent implements OnInit {
-  public total: number = 124;
+  public total: number = 12;
   constructor(public brand: string, public name: string, public price: number) { }
 
   KegComponent.editTotal() {
     this.total -=1;
+    if (this.total < 10 ) {
+      alert('running low');
+    }
   }
 
   ngOnInit() {

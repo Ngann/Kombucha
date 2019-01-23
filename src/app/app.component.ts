@@ -15,18 +15,22 @@ export class AppComponent {
   new KegComponent('GT\'s Enlightened', 'Gingerberry', 5 )
 ];
 
-priceColor(currentKombucha){
-  if (currentKombucha.price < 4){
-    return "bg-info";
-  } else {
-    return "bg-success";
+  priceColor(currentKombucha){
+    if (currentKombucha.price < 4){
+      return "bg-info";
+    } else {
+      return "bg-success";
+    }
   }
-}
 
-selectedKeg: KegComponent = this.kombuchas[0];
+  selectedKeg: null;
 
-editKegInfo(clickedKeg){
-  this.selectedKeg = clickedKeg;
-}
+  editKegInfo(clickedKeg){
+    this.selectedKeg = clickedKeg;
+  }
+
+  finishedEditing() {
+    this.selectedKeg = null;
+  }
 
 }
