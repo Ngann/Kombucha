@@ -7,38 +7,4 @@
   <img width="300" alt="Kombucha Logo" src="assets/img/kombucha-img.jpeg">
 </div>
 <h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2>List of Kombuchas</h2>
-  </li>
-  <li  *ngFor="let currentKombucha of kombuchas">
-    <h2>{{ currentKombucha.brand }}</h2>
-    <p>{{currentKombucha.name}}</p>
-    <p [class]="priceColor(currentKombucha)">${{currentKombucha.price}}</p>
-    <p>Pints remaing: {{currentKombucha.total}}</p>
-    <button (click)="currentKombucha.editTotal()">Down a pint!</button>
-    <button (click)="editKegInfo(currentKombucha)">Edit Keg</button>
-  </li>
-</ul>
-
-<div *ngIf="selectedKeg">
-<h3>Edit Kombucha</h3>
-<input [(ngModel)]="selectedKeg.name" placeholder="Enter new name:">
-<button (click)="finishedEditing()">Done!</button>
-</div>
-
-<form>
-  <div class="form-group">
-    <label for="brand">Brand</label>
-    <input type="text" name="brand" id="brand">
-  </div>
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name">
-  </div>
-  <div class="form-group">
-    <label for="price">Price</label>
-    <input type="number" name="price" id="price">
-  </div>
-  <button type="submit" class="btn btn-primary" name="button">Submit</button>
-</form>
+<app-keg-list [childKegList]="masterKombuchaList" (clickSender)="editKegInfo($event)"></app-keg-list>

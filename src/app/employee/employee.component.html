@@ -1,3 +1,40 @@
-<p>
-  employee works!
-</p>
+<!-- <div [hidden]="!submitted">
+  <h2>You submitted the following:</h2>
+  <div class="row">
+    <div class="col-xs-3">Name</div>
+    <div class="col-xs-9">{{ model.name }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Brand</div>
+    <div class="col-xs-9">{{ model.brand }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">price</div>
+    <div class="col-xs-9">{{ model.price}}</div>
+  </div>
+  <br>
+  <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+</div>
+
+<div *ngIf="selectedKeg">
+<h3>Edit Kombucha</h3>
+<input [(ngModel)]="selectedKeg.name" placeholder="Enter new name:">
+<button (click)="finishedEditing()">Done!</button>
+</div>
+
+<form (ngSubmit)="onSubmit()" #kegForm="ngForm">
+  <div class="form-group">
+    <label for="brand">Brand</label>
+    <input type="text" name="brand" id="brand" required [(ngModel)]="model.brand" #brand="ngModel">
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" required [(ngModel)]="model.name" #name="ngModel">
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="number" name="price" id="price" required [(ngModel)]="model.price" #price="ngModel">
+  </div>
+  <button type="submit" class="btn btn-success" [disabled]="!kegForm.form.valid">Submit</button>
+  <button type="submit" class="btn btn-primary" name="button" (click)="newKeg(); kegForm.reset()">New Keg</button>
+</form> -->

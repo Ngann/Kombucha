@@ -1,0 +1,14 @@
+<ul>
+  <li>
+    <h2>List of Kombuchas</h2>
+  </li>
+  <li  *ngFor="let currentKombucha of childKegList">
+    <h2>{{ currentKombucha.brand }}</h2>
+    <p>{{currentKombucha.name}}</p>
+    <p [class]="priceColor(currentKombucha)">${{currentKombucha.price}}</p>
+    <p>Pints remaing: {{currentKombucha.total}}</p>
+    <button (click)="currentKombucha.editTotal()">Down a pint!</button>
+    <!-- <button (click)="editKegInfo(currentKombucha)">Edit Keg</button> -->
+    <button (click)="editButtonClicked(currentKombucha)">Edit button Clicked</button>
+  </li>
+</ul>

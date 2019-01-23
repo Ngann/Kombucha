@@ -4,17 +4,21 @@ import { FormsModule }  from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { KegComponent } from './keg/keg.component';
 import { PatronComponent } from './patron/patron.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { EditKegsComponent } from './edit-kegs/edit-kegs.component';
+import { NewKegsComponent } from './new-kegs/new-kegs.component';
+import { KegListComponent } from './keg-list/keg-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    KegComponent,
     PatronComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    EditKegsComponent,
+    NewKegsComponent,
+    KegListComponent
   ],
   imports: [
     BrowserModule,

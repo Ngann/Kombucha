@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { KegComponent } from './keg/keg.component';
-
-
+import { EmployeeComponent } from './employee/employee.component';
+import { KegComponent } from './models/keg.model';
 
 @Component({
   selector: 'app-root',
@@ -10,18 +9,10 @@ import { KegComponent } from './keg/keg.component';
 })
 export class AppComponent {
   title = 'kombucha';
-  kombuchas: KegComponent[] = [
+  masterKombuchaList: KegComponent[] = [
   new KegComponent('Health Aid', 'Dragonfruit', 3 ),
   new KegComponent('GT\'s Enlightened', 'Gingerberry', 5 )
 ];
-
-  priceColor(currentKombucha){
-    if (currentKombucha.price < 4){
-      return "bg-info";
-    } else {
-      return "bg-success";
-    }
-  }
 
   selectedKeg: null;
 
@@ -33,4 +24,14 @@ export class AppComponent {
     this.selectedKeg = null;
   }
 
+
+  // model = new KegComponent('La Croix', 'Tangerine', 6)
+  //
+  // newKeg() {
+  //   this.model = new KegComponent('','', 6);
+  // }
+  //
+  // submitted = false;
+  //
+  // onSubmit() { this.submitted = true; }
 }
