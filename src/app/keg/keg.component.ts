@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./keg.component.css']
 })
 export class KegComponent implements OnInit {
-
-  constructor() { }
+  constructor(public brand: string, public name: string, public price: number) { }
 
   ngOnInit() {
   }
-
 }

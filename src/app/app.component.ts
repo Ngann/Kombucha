@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { KegComponent } from './keg/keg.component';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kombucha';
-
-  firstKeg = {
-    name: "Health Aid"
-  }
+  kombuchas: KegComponent[] = [
+  new KegComponent('Health Aid', 'Dragonfruit', 5 ),
+  new KegComponent('GT\'s Enlightened', 'Gingerberry', 5 )
+];
 }

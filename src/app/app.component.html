@@ -10,8 +10,10 @@
   <li>
     <h2>List of Kombuchas</h2>
   </li>
-  <li>
-    <h2>{{ firstKeg.name }}</h2>
+  <li *ngFor="let currentKombucha of kombuchas">
+    <h2>{{ currentKombucha.brand }}</h2>
+    <p>{{currentKombucha.name}}</p>
+    <p>${{currentKombucha.price}}</p>
   </li>
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
