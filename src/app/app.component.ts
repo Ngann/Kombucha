@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { KegComponent } from './keg/keg.component';
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,6 +21,12 @@ priceColor(currentKombucha){
   } else {
     return "bg-success";
   }
+}
+
+selectedKeg: KegComponent = this.kombuchas[0];
+
+editKegInfo(clickedKeg){
+  this.selectedKeg = clickedKeg;
 }
 
 }

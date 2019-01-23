@@ -15,9 +15,10 @@
     <p>{{currentKombucha.name}}</p>
     <p [class]="priceColor(currentKombucha)">${{currentKombucha.price}}</p>
     <p>Pints remaing: {{currentKombucha.total}}</p>
-    <button (click)="currentKombucha.editKeg()">Down a pint!</button>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+    <button (click)="currentKombucha.editTotal()">Down a pint!</button>
+    <button (click)="editKegInfo(currentKombucha)">Edit Keg</button>
   </li>
 </ul>
+
+<h3>Edit Kombucha</h3>
+<input [(ngModel)]="selectedKeg.name" placeholder="Enter new name:">

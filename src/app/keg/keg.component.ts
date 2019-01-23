@@ -9,17 +9,9 @@ export class KegComponent implements OnInit {
   public total: number = 124;
   constructor(public brand: string, public name: string, public price: number) { }
 
-  KegComponent.editKeg() {
+  KegComponent.editTotal() {
     this.total -=1;
   }
-
-  // KegComponent.priceColor(currentKombucha){
-  //   if (currentKombucha.price < 4){
-  //     return "bg-info";
-  //   } else {
-  //     return "bg-success";
-  //   }
-  // }
 
   ngOnInit() {
   }
