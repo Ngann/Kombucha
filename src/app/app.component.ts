@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { KegComponent } from './keg/keg.component';
+import { editKeg } from './keg/keg.component';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,5 @@ export class AppComponent {
   new KegComponent('Health Aid', 'Dragonfruit', 5 ),
   new KegComponent('GT\'s Enlightened', 'Gingerberry', 5 )
 ];
+
 }
