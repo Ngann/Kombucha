@@ -10,10 +10,10 @@
   <li>
     <h2>List of Kombuchas</h2>
   </li>
-  <li *ngFor="let currentKombucha of kombuchas">
+  <li  *ngFor="let currentKombucha of kombuchas">
     <h2>{{ currentKombucha.brand }}</h2>
     <p>{{currentKombucha.name}}</p>
-    <p>${{currentKombucha.price}}</p>
+    <p [class]="priceColor(currentKombucha)">${{currentKombucha.price}}</p>
     <p>Pints remaing: {{currentKombucha.total}}</p>
     <button (click)="currentKombucha.editKeg()">Down a pint!</button>
   </li>

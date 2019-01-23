@@ -13,6 +13,14 @@ export class KegComponent implements OnInit {
     this.total -=1;
   }
 
+  // KegComponent.priceColor(currentKombucha){
+  //   if (currentKombucha.price < 4){
+  //     return "bg-info";
+  //   } else {
+  //     return "bg-success";
+  //   }
+  // }
+
   ngOnInit() {
   }
 }
