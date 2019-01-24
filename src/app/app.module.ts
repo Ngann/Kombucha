@@ -24,7 +24,7 @@ import { KegListComponent } from './keg-list/keg-list.component';
     BrowserModule,
     FormsModule
   ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })

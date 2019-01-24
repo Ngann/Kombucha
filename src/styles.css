@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Major Mono Display', monospace;
+}
+
+p {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}

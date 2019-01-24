@@ -11,7 +11,8 @@ export class AppComponent {
   title = 'kombucha';
   masterKombuchaList: KegComponent[] = [
   new KegComponent('Health Aid', 'Dragonfruit', 3 ),
-  new KegComponent('GT\'s Enlightened', 'Gingerberry', 5 )
+  new KegComponent('GT\'s Enlightened', 'Gingerberry', 5 ),
+  new KegComponent('Kevita', 'Guava', 6 )
 ];
 
   selectedKeg: null;
