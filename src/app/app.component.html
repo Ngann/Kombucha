@@ -6,7 +6,6 @@
   </h1>
   <img width="300" alt="Kombucha Logo" src="assets/img/kombucha-img.jpeg">
 </div>
-<h2>Here are some links to help you start: </h2>
 <app-keg-list [childKegList]="masterKombuchaList" (clickSender)="editKegInfo($event)"></app-keg-list>
 
 <app-edit-kegs [selectedKeg]="selectedKeg" (doneButtonClickedSender)="finishedEditing()"></app-edit-kegs>
