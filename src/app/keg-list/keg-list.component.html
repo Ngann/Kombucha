@@ -7,7 +7,7 @@
 
       <h2 class="">{{ currentKombucha.brand }}</h2>
       <p>{{currentKombucha.name}}</p>
-      <p class="" [class]="priceColor(currentKombucha)">${{currentKombucha.price}}</p>
+      <p [class]="priceColor(currentKombucha)">${{currentKombucha.price}}</p>
       <p class="">Pints remaing: {{currentKombucha.total}}</p>
       <button class="btn btn-outline-warning" (click)="currentKombucha.editTotal()">Down a pint!</button>
       <!-- <button (click)="editKegInfo(currentKombucha)">Edit Keg</button> -->

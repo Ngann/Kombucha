@@ -12,5 +12,12 @@ export class NewKegsComponent {
   submitForm(brand: string, name: string, price: number) {
     let newKeg: KegComponent = new KegComponent(brand, name, parseInt(price));
     this.sendKeg.emit(newKeg);
+
+  }
+
+  selectedHeader = null;
+
+  newKegForm() {
+    this.selectedHeader = true;
   }
 }

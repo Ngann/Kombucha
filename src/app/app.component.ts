@@ -21,11 +21,13 @@ export class AppComponent {
     this.selectedKeg = clickedKeg;
   }
 
-  finishedEditing() {
+  finishedEditingApp() {
     this.selectedKeg = null;
   }
 
   addKeg(newKeg: KegComponent) {
     this.masterKombuchaList.push(newKeg);
   }
+
+
 }

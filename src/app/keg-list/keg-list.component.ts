@@ -14,13 +14,6 @@ export class KegListComponent  {
     this.clickSender.emit(kegToEdit);
   }
 
-  title = 'kombucha';
-  kombuchas: KegComponent[] = [
-  new KegComponent('Health Aid', 'Dragonfruit', 3 ),
-  new KegComponent('GT\'s Enlightened', 'Gingerberry', 5 ),
-  new KegComponent('Kevita', 'Guava', 6 )
-];
-
   priceColor(currentKombucha){
     if (currentKombucha.price < 4){
       return "bg-info";
@@ -28,7 +21,11 @@ export class KegListComponent  {
       return "bg-success";
     }
   }
-
-
-
 }
+
+//   title = 'kombucha';
+//   kombuchas: KegComponent[] = [
+//   new KegComponent('Health Aid', 'Dragonfruit', 3 ),
+//   new KegComponent('GT\'s Enlightened', 'Gingerberry', 5 ),
+//   new KegComponent('Kevita', 'Guava', 6 )
+// ];

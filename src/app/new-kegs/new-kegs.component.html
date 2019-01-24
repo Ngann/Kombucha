@@ -1,16 +1,18 @@
-<h2>New Keg</h2>
-<form class="w-75 p-3">
-  <div class="form-group">
-    <label>Enter Keg Brand:</label>
-    <input #newBrand class="form-control">
-  </div>
-  <div class="form-group">
-    <label>Enter Kombucha Name:</label>
-    <input #newName class="form-control">
-  </div>
-  <div class="form-group">
-    <label>Enter Pint Price:</label>
-    <input #newPrice class="form-control">
-    <button class="btn btn-primary" (click)="submitForm(newBrand.value, newName.value, newPrice.value)">Add</button>
-  </div>
+<h2 (click)="newKegForm()">New Keg</h2>
+<div *ngIf="selectedHeader">
+  <form class="w-75 p-3">
+    <div class="form-group">
+      <label>Enter Keg Brand:</label>
+      <input #newBrand class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Enter Kombucha Name:</label>
+      <input #newName class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Enter Pint Price:</label>
+      <input #newPrice class="form-control">
+      <button class="btn btn-primary" (click)="submitForm(newBrand.value, newName.value, newPrice.value)">Add</button>
+    </div>
 </form>
+</div>
