@@ -1,3 +1,14 @@
-<p>
-  new-kegs works!
-</p>
+<h1>New Keg</h1>
+<div>
+ <label>Enter Keg Brand:</label>
+ <input #newBrand>
+</div>
+<div>
+  <label>Enter Kombucha Name:</label>
+  <input #newName>
+</div>
+<div>
+  <label>Enter Pint Price:</label>
+  <input #newPrice>
+  <button (click)="submitForm(newBrand.value, newName.value, newPrice.value)">Add</button>
+</div>

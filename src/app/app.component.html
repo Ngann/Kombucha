@@ -10,3 +10,5 @@
 <app-keg-list [childKegList]="masterKombuchaList" (clickSender)="editKegInfo($event)"></app-keg-list>
 
 <app-edit-kegs [selectedKeg]="selectedKeg" (doneButtonClickedSender)="finishedEditing()"></app-edit-kegs>
+
+<app-new-kegs (sendKeg)="addKeg($event)"></app-new-kegs>

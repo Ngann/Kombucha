@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { KegComponent } from '../models/keg.model';
 
 @Component({
   selector: 'app-new-kegs',
   templateUrl: './new-kegs.component.html',
   styleUrls: ['./new-kegs.component.css']
 })
-export class NewKegsComponent implements OnInit {
+export class NewKegsComponent {
+  @Output() sendKeg = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() {
+  submitForm(brand: string, name: string, price: number) {
+    let newKeg: KegComponent = new KegComponent(brand, name, parseInt(price));
+    this.sendKeg.emit(newKeg);
   }
-
 }

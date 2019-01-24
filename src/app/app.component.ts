@@ -24,14 +24,7 @@ export class AppComponent {
     this.selectedKeg = null;
   }
 
-
-  // model = new KegComponent('La Croix', 'Tangerine', 6)
-  //
-  // newKeg() {
-  //   this.model = new KegComponent('','', 6);
-  // }
-  //
-  // submitted = false;
-  //
-  // onSubmit() { this.submitted = true; }
+  addKeg(newKeg: KegComponent) {
+    this.masterKombuchaList.push(newKeg);
+  }
 }
