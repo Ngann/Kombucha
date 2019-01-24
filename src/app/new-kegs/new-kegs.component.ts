@@ -20,4 +20,8 @@ export class NewKegsComponent {
   newKegForm() {
     this.selectedHeader = true;
   }
+
+  finishedEditingNew(){
+    this.selectedHeader = null;
+  }
 }
